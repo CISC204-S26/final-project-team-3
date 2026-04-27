@@ -1,3 +1,20 @@
 [gd_scene format=3 uid="uid://b5k07ish5lvyw"]
 
+[ext_resource type="Texture2D" uid="uid://bt5uoriyi5k4s" path="res://Screenshot 2026-04-27 at 2.42.39 PM.png" id="1_3xosi"]
+[ext_resource type="Texture2D" uid="uid://bm6ljet3qrdys" path="res://icon.svg" id="2_1abo5"]
+
 [node name="Scene 1" type="Node2D" unique_id=1913310543]
+
+[node name="temporary_background" type="Sprite2D" parent="." unique_id=2003394525]
+position = Vector2(582, 331)
+scale = Vector2(6.858824, 5.857143)
+texture = ExtResource("1_3xosi")
+
+[node name="obstacle1" type="Sprite2D" parent="." unique_id=133640584]
+position = Vector2(174, 600)
+texture = ExtResource("2_1abo5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2056825279]
+position = Vector2(440, 541)
+scale = Vector2(1, 1.796875)
+texture = ExtResource("2_1abo5")
