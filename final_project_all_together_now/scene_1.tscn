@@ -3,12 +3,17 @@
 [ext_resource type="Texture2D" uid="uid://bt5uoriyi5k4s" path="res://Screenshot 2026-04-27 at 2.42.39 PM.png" id="1_3xosi"]
 [ext_resource type="Script" uid="uid://bb486lrqxcny7" path="res://player_1(crab)(w_physics).gd" id="2_1abo5"]
 [ext_resource type="Texture2D" uid="uid://ckyloqb8ch21d" path="res://CRAB.png" id="3_knagl"]
+[ext_resource type="Script" uid="uid://ceduv6ttcyknh" path="res://player_2_(wave).gd" id="4_kl852"]
+[ext_resource type="Texture2D" uid="uid://dhe7d537l8ll0" path="res://wave.png" id="4_knagl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kl852"]
 size = Vector2(68, 49)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1abo5"]
-size = Vector2(398, 52)
+[sub_resource type="CircleShape2D" id="CircleShape2D_4nmru"]
+radius = 103.31021
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_knagl"]
+radius = 106.004715
 
 [node name="Scene 1" type="Node2D" unique_id=1913310543]
 
@@ -31,6 +36,23 @@ shape = SubResource("RectangleShape2D_kl852")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=958189230]
 
+[node name="player2 (wave)" type="CharacterBody2D" parent="StaticBody2D" unique_id=610266956]
+script = ExtResource("4_kl852")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D/player2 (wave)" unique_id=483646799]
+position = Vector2(220, 494)
+texture = ExtResource("4_knagl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D/player2 (wave)" unique_id=962681547]
+position = Vector2(234, 465)
+shape = SubResource("CircleShape2D_4nmru")
+
 [node name="temp barrier" type="CollisionShape2D" parent="StaticBody2D" unique_id=2052207388]
-position = Vector2(235, 436)
-shape = SubResource("RectangleShape2D_1abo5")
+visible = false
+position = Vector2(228, 469)
+shape = SubResource("CircleShape2D_knagl")
+
+[node name="temp barrier2" type="CollisionShape2D" parent="StaticBody2D" unique_id=437010674]
+visible = false
+position = Vector2(139, 558)
+shape = SubResource("CircleShape2D_knagl")
