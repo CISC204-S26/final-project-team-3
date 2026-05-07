@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://b5k07ish5lvyw"]
 
-[ext_resource type="Texture2D" uid="uid://bt5uoriyi5k4s" path="res://Screenshot 2026-04-27 at 2.42.39 PM.png" id="1_3xosi"]
+[ext_resource type="Texture2D" uid="uid://by6l3okyidlip" path="res://Screenshot 2026-05-07 at 2.33.42 PM.png" id="1_4nmru"]
 [ext_resource type="Script" uid="uid://bb486lrqxcny7" path="res://player_1(crab)(w_physics).gd" id="2_1abo5"]
+[ext_resource type="Texture2D" uid="uid://ccphooedkwo0y" path="res://Screenshot 2026-05-07 at 2.33.11 PM.png" id="2_05u5g"]
 [ext_resource type="Texture2D" uid="uid://ckyloqb8ch21d" path="res://CRAB.png" id="3_knagl"]
 [ext_resource type="Texture2D" uid="uid://dhe7d537l8ll0" path="res://wave.png" id="4_knagl"]
 [ext_resource type="Script" uid="uid://brqcww1acbwmp" path="res://player_2wave.gd" id="5_kl852"]
@@ -26,24 +27,30 @@ size = Vector2(91, 92.5)
 
 [node name="Scene 1" type="Node2D" unique_id=1913310543]
 
-[node name="temporary_background" type="Sprite2D" parent="." unique_id=2003394525]
-position = Vector2(582, 331)
-scale = Vector2(6.858824, 5.857143)
-texture = ExtResource("1_3xosi")
+[node name="temporary background 1" type="Sprite2D" parent="." unique_id=952727831]
+position = Vector2(579.49994, 213.5)
+scale = Vector2(64.27777, 30.214285)
+texture = ExtResource("1_4nmru")
+
+[node name="temporary background 2" type="Sprite2D" parent="." unique_id=1544304648]
+position = Vector2(579.5, 539)
+scale = Vector2(5.8838387, 1.83871)
+texture = ExtResource("2_05u5g")
 
 [node name="player1(crab)(w physics)" type="CharacterBody2D" parent="." unique_id=176305980]
 script = ExtResource("2_1abo5")
 
 [node name="Sprite2D" type="Sprite2D" parent="player1(crab)(w physics)" unique_id=1759484992]
-position = Vector2(119, 357)
+position = Vector2(122.00001, 331)
 scale = Vector2(0.06054684, 0.071289055)
 texture = ExtResource("3_knagl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player1(crab)(w physics)" unique_id=1144704704]
-position = Vector2(117, 347)
+position = Vector2(123, 323)
 shape = SubResource("RectangleShape2D_kl852")
 
 [node name="player2(wave)" type="CharacterBody2D" parent="." unique_id=1096374038]
+position = Vector2(-128, 0)
 script = ExtResource("5_kl852")
 
 [node name="Sprite2D" type="Sprite2D" parent="player2(wave)" unique_id=1529809824]
@@ -75,5 +82,5 @@ position = Vector2(375, 499)
 shape = SubResource("RectangleShape2D_cr3cd")
 
 [node name="wavebarrier7" type="CollisionShape2D" parent="player2(wave)" unique_id=1446312918]
-position = Vector2(43.5, 596.25)
+position = Vector2(39, 596)
 shape = SubResource("RectangleShape2D_mjd5i")
