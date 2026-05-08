@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://bayhy1ldadapu"]
+
+[ext_resource type="Script" uid="uid://brqcww1acbwmp" path="res://player_2wave.gd" id="1_8xjnt"]
+[ext_resource type="Texture2D" uid="uid://dhe7d537l8ll0" path="res://wave.png" id="2_ufh5k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x3sgo"]
+radius = 103.392456
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryqyf"]
+size = Vector2(191, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hlws"]
+size = Vector2(95, 114)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jhxp"]
+size = Vector2(54, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6iqoo"]
+size = Vector2(91, 92.5)
+
+[node name="player2" type="Node2D" unique_id=403489986]
+
+[node name="player2(wave)" type="CharacterBody2D" parent="." unique_id=1478705253]
+position = Vector2(-128, 0)
+script = ExtResource("1_8xjnt")
+
+[node name="Sprite2D" type="Sprite2D" parent="player2(wave)" unique_id=700985972]
+position = Vector2(243, 487)
+texture = ExtResource("2_ufh5k")
+
+[node name="wavebarrier" type="CollisionShape2D" parent="player2(wave)" unique_id=1156014512]
+position = Vector2(258, 450)
+shape = SubResource("CircleShape2D_x3sgo")
+
+[node name="wavebarrier2" type="CollisionShape2D" parent="player2(wave)" unique_id=1844364038]
+position = Vector2(150, 550)
+shape = SubResource("CircleShape2D_x3sgo")
+
+[node name="wavebarrier3" type="CollisionShape2D" parent="player2(wave)" unique_id=945845468]
+position = Vector2(223, 490)
+shape = SubResource("CircleShape2D_x3sgo")
+
+[node name="wavebarrier4" type="CollisionShape2D" parent="player2(wave)" unique_id=1641028973]
+position = Vector2(429.5, 603)
+shape = SubResource("RectangleShape2D_ryqyf")
+
+[node name="wavebarrier5" type="CollisionShape2D" parent="player2(wave)" unique_id=2108082714]
+position = Vector2(287, 586)
+shape = SubResource("RectangleShape2D_1hlws")
+
+[node name="wavebarrier6" type="CollisionShape2D" parent="player2(wave)" unique_id=328643128]
+position = Vector2(375, 499)
+shape = SubResource("RectangleShape2D_0jhxp")
+
+[node name="wavebarrier7" type="CollisionShape2D" parent="player2(wave)" unique_id=132434787]
+position = Vector2(39, 596)
+shape = SubResource("RectangleShape2D_6iqoo")
