@@ -23,3 +23,8 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name == "crab":
+		get_tree().change_scene_to_file("res://scene_1.tscn")

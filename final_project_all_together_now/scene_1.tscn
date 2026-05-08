@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://ckyloqb8ch21d" path="res://CRAB.png" id="3_knagl"]
 [ext_resource type="Texture2D" uid="uid://dhe7d537l8ll0" path="res://wave.png" id="4_knagl"]
 [ext_resource type="Script" uid="uid://brqcww1acbwmp" path="res://player_2wave.gd" id="5_kl852"]
+[ext_resource type="Texture2D" uid="uid://2e6p7kije2xh" path="res://assets/the_gull.png" id="7_mjd5i"]
+[ext_resource type="Script" uid="uid://5e1kpmglwucr" path="res://the_gull.gd" id="8_t0rxu"]
+[ext_resource type="Script" uid="uid://bg5a7ahgebi8w" path="res://collision_shape_2d.gd" id="9_2fno3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kl852"]
 size = Vector2(68, 49)
@@ -25,6 +28,9 @@ size = Vector2(54, 27)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mjd5i"]
 size = Vector2(91, 92.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jl8ns"]
+size = Vector2(14.288656, 13.544304)
+
 [node name="Scene 1" type="Node2D" unique_id=1913310543]
 
 [node name="temporary background 1" type="Sprite2D" parent="." unique_id=952727831]
@@ -37,15 +43,15 @@ position = Vector2(579.5, 539)
 scale = Vector2(5.8838387, 1.83871)
 texture = ExtResource("2_05u5g")
 
-[node name="player1(crab)(w physics)" type="CharacterBody2D" parent="." unique_id=176305980]
+[node name="crab" type="CharacterBody2D" parent="." unique_id=176305980]
 script = ExtResource("2_1abo5")
 
-[node name="Sprite2D" type="Sprite2D" parent="player1(crab)(w physics)" unique_id=1759484992]
+[node name="Sprite2D" type="Sprite2D" parent="crab" unique_id=1759484992]
 position = Vector2(122.00001, 331)
 scale = Vector2(0.06054684, 0.071289055)
 texture = ExtResource("3_knagl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player1(crab)(w physics)" unique_id=1144704704]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crab" unique_id=1144704704]
 position = Vector2(123, 323)
 shape = SubResource("RectangleShape2D_kl852")
 
@@ -84,3 +90,20 @@ shape = SubResource("RectangleShape2D_cr3cd")
 [node name="wavebarrier7" type="CollisionShape2D" parent="player2(wave)" unique_id=1446312918]
 position = Vector2(39, 596)
 shape = SubResource("RectangleShape2D_mjd5i")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2015544001]
+position = Vector2(-135, 76)
+
+[node name="TheGull" type="Sprite2D" parent="Area2D" unique_id=2097606642]
+position = Vector2(131, 96)
+scale = Vector2(0.39518413, 0.36685553)
+texture = ExtResource("7_mjd5i")
+script = ExtResource("8_t0rxu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1663207712]
+position = Vector2(160, 91)
+scale = Vector2(5.705886, 5.2666683)
+shape = SubResource("RectangleShape2D_jl8ns")
+script = ExtResource("9_2fno3")
+
+[connection signal="body_entered" from="Area2D" to="crab" method="_on_area_2d_body_entered"]
