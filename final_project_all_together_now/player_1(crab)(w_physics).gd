@@ -28,3 +28,8 @@ func _physics_process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "crab":
 		get_tree().change_scene_to_file("res://scene_1.tscn")
+
+
+func _on_crab_boundary_body_entered(body: Node2D) -> void:
+	if body.name == "crab":
+		get_tree().change_scene_to_file("res://scene_1.tscn")

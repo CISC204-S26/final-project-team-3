@@ -31,6 +31,12 @@ size = Vector2(91, 92.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jl8ns"]
 size = Vector2(14.288656, 13.544304)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t0rxu"]
+size = Vector2(1176, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fno3"]
+size = Vector2(25, 669)
+
 [node name="Scene 1" type="Node2D" unique_id=1913310543]
 
 [node name="temporary background 1" type="Sprite2D" parent="." unique_id=952727831]
@@ -106,4 +112,15 @@ scale = Vector2(5.705886, 5.2666683)
 shape = SubResource("RectangleShape2D_jl8ns")
 script = ExtResource("9_2fno3")
 
+[node name="crab boundary" type="Area2D" parent="." unique_id=185975224]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crab boundary" unique_id=889884496]
+position = Vector2(577, 660)
+shape = SubResource("RectangleShape2D_t0rxu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="crab boundary" unique_id=321008874]
+position = Vector2(2.5, 324.5)
+shape = SubResource("RectangleShape2D_2fno3")
+
 [connection signal="body_entered" from="Area2D" to="crab" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="crab boundary" to="crab" method="_on_crab_boundary_body_entered"]
