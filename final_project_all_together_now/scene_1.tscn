@@ -37,6 +37,9 @@ size = Vector2(1176, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2fno3"]
 size = Vector2(25, 669)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qqw6"]
+size = Vector2(1577, 519)
+
 [node name="Scene 1" type="Node2D" unique_id=1913310543]
 
 [node name="temporary background 1" type="Sprite2D" parent="." unique_id=952727831]
@@ -115,12 +118,19 @@ script = ExtResource("9_2fno3")
 [node name="crab boundary" type="Area2D" parent="." unique_id=185975224]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="crab boundary" unique_id=889884496]
-position = Vector2(577, 660)
+position = Vector2(578, 661)
 shape = SubResource("RectangleShape2D_t0rxu")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="crab boundary" unique_id=321008874]
 position = Vector2(2.5, 324.5)
 shape = SubResource("RectangleShape2D_2fno3")
+
+[node name="Area2D" type="Area2D" parent="crab boundary" unique_id=524880934]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crab boundary/Area2D" unique_id=814528124]
+position = Vector2(645.5, 516.5)
+shape = SubResource("RectangleShape2D_0qqw6")
+debug_color = Color(0, 0.95686275, 0.69803923, 0.41960785)
 
 [connection signal="body_entered" from="Area2D" to="crab" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="crab boundary" to="crab" method="_on_crab_boundary_body_entered"]
