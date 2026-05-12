@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b5k07ish5lvyw"]
 
 [ext_resource type="Texture2D" uid="uid://by6l3okyidlip" path="res://Screenshot 2026-05-07 at 2.33.42 PM.png" id="1_4nmru"]
+[ext_resource type="Script" uid="uid://dttxkehvwhfgi" path="res://global_crabs.gd" id="1_t0rxu"]
 [ext_resource type="Script" uid="uid://bb486lrqxcny7" path="res://player_1(crab)(w_physics).gd" id="2_1abo5"]
 [ext_resource type="Texture2D" uid="uid://ccphooedkwo0y" path="res://Screenshot 2026-05-07 at 2.33.11 PM.png" id="2_05u5g"]
 [ext_resource type="Texture2D" uid="uid://ckyloqb8ch21d" path="res://CRAB.png" id="3_knagl"]
@@ -41,6 +42,7 @@ size = Vector2(25, 669)
 size = Vector2(1577, 519)
 
 [node name="Scene 1" type="Node2D" unique_id=1913310543]
+script = ExtResource("1_t0rxu")
 
 [node name="temporary background 1" type="Sprite2D" parent="." unique_id=952727831]
 position = Vector2(579.49994, 213.5)
