@@ -13,7 +13,3 @@ func _physics_process(_delta: float) -> void:
 	position.y = clamp(position.y, -110, 0)
 	print(position)
 	move_and_slide()
-
-
-#func _on_top_collision_body_entered(body: Node2D) -> void:
-	#velocity.y = 10
