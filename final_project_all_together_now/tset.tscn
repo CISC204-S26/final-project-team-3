@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://blmhduribkvea"]
+
+[ext_resource type="PackedScene" uid="uid://ddw66l7a37l73" path="res://crab.tscn" id="1_iaoql"]
+[ext_resource type="PackedScene" uid="uid://b5dlrviuslbp0" path="res://crabs_to_be_invited.tscn" id="3_ybxc4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lt8j6"]
+size = Vector2(1244, 71)
+
+[node name="tset" type="Node2D" unique_id=1344490338]
+
+[node name="crab" parent="." unique_id=1071556662 instance=ExtResource("1_iaoql")]
+
+[node name="Crabs to be invited" parent="." unique_id=692358396 instance=ExtResource("3_ybxc4")]
+position = Vector2(315, 86)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1938658876]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=572560209]
+position = Vector2(615, 416)
+shape = SubResource("RectangleShape2D_lt8j6")
+debug_color = Color(0.5021649, 0.5748868, 0.24204686, 0.41960785)

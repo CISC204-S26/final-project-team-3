@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-
+@export var nearby_interactables = []
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
@@ -24,7 +24,10 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("interact"):
+		if nearby_interactables:
+			nearby_interactables.back().interact()
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "crab":
 		get_tree().change_scene_to_file("res://scene_1.tscn")
@@ -33,3 +36,14 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_crab_boundary_body_entered(body: Node2D) -> void:
 	if body.name == "crab":
 		get_tree().change_scene_to_file("res://scene_1.tscn")
+
+
+func _on_interactable_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.
+	print("interactable detected")
+	nearby_interactables.append(area)
+
+func _on_interactable_area_exited(area: Area2D) -> void:
+	pass # Replace with function body.
+	print("interactable removed")
+	nearby_interactables.erase(area)
