@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c5v4qcrghj204"]
+
+[ext_resource type="Texture2D" uid="uid://2e6p7kije2xh" path="res://assets/the_gull.png" id="1_q44gv"]
+[ext_resource type="Script" uid="uid://5e1kpmglwucr" path="res://the_gull.gd" id="2_d6hpv"]
+[ext_resource type="Script" uid="uid://bg5a7ahgebi8w" path="res://collision_shape_2d.gd" id="3_7o0wu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vwrk3"]
+size = Vector2(14.288656, 13.544304)
+
+[node name="gull" type="Node2D" unique_id=1903418641]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1920442763]
+position = Vector2(-135, 76)
+
+[node name="TheGull" type="Sprite2D" parent="Area2D" unique_id=1442093698]
+position = Vector2(131, 96)
+scale = Vector2(0.39518413, 0.36685553)
+texture = ExtResource("1_q44gv")
+script = ExtResource("2_d6hpv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=587995795]
+position = Vector2(160, 91)
+scale = Vector2(5.705886, 5.2666683)
+shape = SubResource("RectangleShape2D_vwrk3")
+script = ExtResource("3_7o0wu")

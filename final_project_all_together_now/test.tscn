@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bayhy1ldadapu" path="res://player_2.tscn" id="1_6uqi0"]
 [ext_resource type="PackedScene" uid="uid://ddw66l7a37l73" path="res://crab.tscn" id="2_ppyta"]
 [ext_resource type="PackedScene" uid="uid://b5dlrviuslbp0" path="res://crabs_to_be_invited.tscn" id="3_ykrsh"]
+[ext_resource type="PackedScene" uid="uid://c5v4qcrghj204" path="res://gull.tscn" id="4_ppyta"]
 
 [node name="test" type="Node2D" unique_id=985601211]
 
@@ -12,3 +13,5 @@
 
 [node name="Crabs to be invited" parent="." unique_id=692358396 instance=ExtResource("3_ykrsh")]
 position = Vector2(679, 163)
+
+[node name="gull" parent="." unique_id=1903418641 instance=ExtResource("4_ppyta")]
