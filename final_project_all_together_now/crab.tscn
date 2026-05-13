@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://ddw66l7a37l73"]
+
+[ext_resource type="Script" uid="uid://bb486lrqxcny7" path="res://player_1(crab)(w_physics).gd" id="1_14etv"]
+[ext_resource type="Texture2D" uid="uid://ckyloqb8ch21d" path="res://CRAB.png" id="2_mm7dm"]
+[ext_resource type="Script" uid="uid://b7n07wwi2rddc" path="res://interactable.gd" id="3_vn1u7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pu6b7"]
+size = Vector2(68, 49)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qmhn5"]
+radius = 99.04544
+
+[node name="crab" type="CharacterBody2D" unique_id=1071556662]
+script = ExtResource("1_14etv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1481651451]
+position = Vector2(122.00001, 331)
+scale = Vector2(0.06054684, 0.071289055)
+texture = ExtResource("2_mm7dm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=116261727]
+position = Vector2(123, 323)
+shape = SubResource("RectangleShape2D_pu6b7")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=911475274]
+
+[node name="interactable" type="Area2D" parent="." unique_id=587649148]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_vn1u7")
+metadata/_custom_type_script = "uid://b7n07wwi2rddc"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable" unique_id=1621103632]
+position = Vector2(123, 317)
+shape = SubResource("CircleShape2D_qmhn5")
+
+[connection signal="area_entered" from="interactable" to="." method="_on_interactable_area_entered"]
+[connection signal="area_exited" from="interactable" to="." method="_on_interactable_area_exited"]
