@@ -38,6 +38,9 @@ size = Vector2(1176, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2fno3"]
 size = Vector2(25, 669)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0qqw6"]
+size = Vector2(88.25, 687)
+
 [node name="Scene 1" type="Node2D" unique_id=1913310543]
 script = ExtResource("1_t0rxu")
 
@@ -124,7 +127,15 @@ shape = SubResource("RectangleShape2D_t0rxu")
 position = Vector2(2.5, 324.5)
 shape = SubResource("RectangleShape2D_2fno3")
 
+[node name="win" type="Area2D" parent="." unique_id=87085988]
+position = Vector2(2.5, 324.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="win" unique_id=1043719007]
+position = Vector2(1114.625, 16.5)
+shape = SubResource("RectangleShape2D_0qqw6")
+
 [connection signal="body_entered" from="gull 2d" to="crab" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="crab boundary" to="crab" method="_on_crab_boundary_body_entered"]
 [connection signal="body_entered" from="crab boundary" to="gull 2d/TheGull" method="_on_crab_boundary_body_entered"]
 [connection signal="body_entered" from="crab boundary" to="gull 2d/CollisionShape2D" method="_on_crab_boundary_body_entered"]
+[connection signal="body_entered" from="win" to="crab" method="_on_win_body_entered"]

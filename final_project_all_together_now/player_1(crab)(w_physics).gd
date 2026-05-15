@@ -47,3 +47,9 @@ func _on_interactable_area_exited(area: Area2D) -> void:
 	pass # Replace with function body.
 	print("interactable removed")
 	nearby_interactables.erase(area)
+
+
+func _on_win_body_entered(body: Node2D) -> void:
+	if body.name == "crab":
+		get_tree().change_scene_to_file("res://level_one.tscn")
+	pass # Replace with function body.

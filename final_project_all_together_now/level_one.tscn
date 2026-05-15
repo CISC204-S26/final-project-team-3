@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ddw66l7a37l73" path="res://crab.tscn" id="1_bo08i"]
 [ext_resource type="PackedScene" uid="uid://bayhy1ldadapu" path="res://player_2.tscn" id="2_foyw7"]
 [ext_resource type="PackedScene" uid="uid://b5dlrviuslbp0" path="res://crabs_to_be_invited.tscn" id="3_foyw7"]
+[ext_resource type="Script" uid="uid://b26rc6ki2iyn1" path="res://win.gd" id="4_eck3n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eck3n"]
 size = Vector2(454, 273.5)
@@ -29,6 +30,9 @@ size = Vector2(3236, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c00e3"]
 size = Vector2(11, 669)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0l1we"]
+size = Vector2(63, 687)
 
 [node name="level one" type="Node2D" unique_id=1647417860]
 
@@ -101,6 +105,15 @@ shape = SubResource("RectangleShape2D_l6eyr")
 position = Vector2(-4.5, 324.5)
 shape = SubResource("RectangleShape2D_c00e3")
 
+[node name="win" type="Area2D" parent="." unique_id=334529980]
+position = Vector2(3048, 314)
+script = ExtResource("4_eck3n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="win" unique_id=809899939]
+position = Vector2(-1, 17)
+shape = SubResource("RectangleShape2D_0l1we")
+
 [connection signal="body_entered" from="crab boundary" to="." method="_on_crab_boundary_body_entered"]
 [connection signal="body_entered" from="crab boundary" to="crab" method="_on_crab_boundary_body_entered"]
 [connection signal="body_entered" from="crab boundary" to="crab boundary" method="_on_body_entered"]
+[connection signal="body_entered" from="win" to="win" method="_on_body_entered"]
