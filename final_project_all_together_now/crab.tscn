@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://b7n07wwi2rddc" path="res://interactable.gd" id="3_vn1u7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pu6b7"]
-size = Vector2(68, 49)
+size = Vector2(68, 57.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qmhn5"]
 radius = 99.04544
@@ -19,7 +19,7 @@ scale = Vector2(0.06054684, 0.071289055)
 texture = ExtResource("2_mm7dm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=116261727]
-position = Vector2(123, 323)
+position = Vector2(123, 327.25)
 shape = SubResource("RectangleShape2D_pu6b7")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=911475274]

@@ -18,6 +18,9 @@ size = Vector2(54, 27)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6iqoo"]
 size = Vector2(91, 92.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8xjnt"]
+size = Vector2(540.5, 73)
+
 [node name="player2" type="Node2D" unique_id=403489986]
 
 [node name="player2(wave)" type="CharacterBody2D" parent="." unique_id=1478705253]
@@ -55,3 +58,7 @@ shape = SubResource("RectangleShape2D_0jhxp")
 [node name="wavebarrier7" type="CollisionShape2D" parent="player2(wave)" unique_id=132434787]
 position = Vector2(39, 596)
 shape = SubResource("RectangleShape2D_6iqoo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player2(wave)" unique_id=1461239468]
+position = Vector2(248.25, 629)
+shape = SubResource("RectangleShape2D_8xjnt")

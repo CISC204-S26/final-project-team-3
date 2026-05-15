@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://ckyloqb8ch21d" path="res://CRAB.png" id="2_fp4ya"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_06bda"]
-radius = 122.0041
+radius = 69.72087
 
 [node name="Crabs to be invited" type="Area2D" unique_id=692358396]
 collision_layer = 2
@@ -13,10 +13,10 @@ script = ExtResource("1_oc3un")
 metadata/_custom_type_script = "uid://b7n07wwi2rddc"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=216928706]
-position = Vector2(248, 201)
+position = Vector2(293, 255)
 shape = SubResource("CircleShape2D_06bda")
 
 [node name="Crab" type="Sprite2D" parent="." unique_id=1580474324]
-position = Vector2(246.99994, 227)
-scale = Vector2(0.11132812, 0.11132812)
+position = Vector2(295.49997, 275.50003)
+scale = Vector2(0.06396481, 0.06396481)
 texture = ExtResource("2_fp4ya")

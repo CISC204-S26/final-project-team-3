@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://bfm8o18wo35fi"]
+
+[ext_resource type="PackedScene" uid="uid://ddw66l7a37l73" path="res://crab.tscn" id="1_bo08i"]
+[ext_resource type="PackedScene" uid="uid://bayhy1ldadapu" path="res://player_2.tscn" id="2_foyw7"]
+[ext_resource type="PackedScene" uid="uid://b5dlrviuslbp0" path="res://crabs_to_be_invited.tscn" id="3_foyw7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eck3n"]
+size = Vector2(454, 273.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xsnk2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bo08i"]
+size = Vector2(368, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_foyw7"]
+size = Vector2(437, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsnk2"]
+size = Vector2(412, 45.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_foyw7"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_eck3n"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_l6eyr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6eyr"]
+size = Vector2(3236, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c00e3"]
+size = Vector2(11, 669)
+
+[node name="level one" type="Node2D" unique_id=1647417860]
+
+[node name="crab" parent="." unique_id=1071556662 instance=ExtResource("1_bo08i")]
+
+[node name="Camera2D" type="Camera2D" parent="crab" unique_id=1840858804]
+position = Vector2(135, 315)
+limit_left = 0
+limit_top = -1530494976
+limit_right = 3055
+limit_bottom = 645
+
+[node name="player2" parent="." unique_id=403489986 instance=ExtResource("2_foyw7")]
+position = Vector2(625, -3)
+
+[node name="first platform" type="StaticBody2D" parent="." unique_id=1131332187]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="first platform" unique_id=1095337147]
+position = Vector2(229, 505.25)
+shape = SubResource("RectangleShape2D_eck3n")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="first platform" unique_id=1413922806]
+self_modulate = Color(1, 0.8156863, 0.3647059, 1)
+position = Vector2(227.375, 504.37497)
+scale = Vector2(459.25, 279.25)
+mesh = SubResource("BoxMesh_xsnk2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=205033474]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1542198209]
+position = Vector2(994, 148)
+shape = SubResource("RectangleShape2D_bo08i")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=122486048]
+position = Vector2(1512, 7)
+shape = SubResource("RectangleShape2D_foyw7")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=919104051]
+position = Vector2(2878, 433)
+shape = SubResource("RectangleShape2D_xsnk2")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D" unique_id=1698771342]
+self_modulate = Color(1, 0.8156863, 0.3647059, 1)
+position = Vector2(992.87506, 150.125)
+scale = Vector2(368.24988, 51.75)
+mesh = SubResource("BoxMesh_foyw7")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="StaticBody2D" unique_id=482255958]
+self_modulate = Color(1, 0.8156863, 0.3647059, 1)
+position = Vector2(1512.125, 12.125004)
+scale = Vector2(439.74985, 50.250008)
+mesh = SubResource("BoxMesh_eck3n")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="StaticBody2D" unique_id=1075068122]
+self_modulate = Color(1, 0.8156863, 0.3647059, 1)
+position = Vector2(2876.625, 434.125)
+scale = Vector2(410.7499, 49.749992)
+mesh = SubResource("BoxMesh_l6eyr")
+
+[node name="Crabs to be invited" parent="." unique_id=692358396 instance=ExtResource("3_foyw7")]
+position = Vector2(1368, -315)
+
+[node name="crab boundary" type="Area2D" parent="." unique_id=2119280823]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crab boundary" unique_id=911411703]
+position = Vector2(1608, 662)
+shape = SubResource("RectangleShape2D_l6eyr")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="crab boundary" unique_id=1790038653]
+position = Vector2(-4.5, 324.5)
+shape = SubResource("RectangleShape2D_c00e3")
+
+[connection signal="body_entered" from="crab boundary" to="." method="_on_crab_boundary_body_entered"]
+[connection signal="body_entered" from="crab boundary" to="crab" method="_on_crab_boundary_body_entered"]
+[connection signal="body_entered" from="crab boundary" to="crab boundary" method="_on_body_entered"]

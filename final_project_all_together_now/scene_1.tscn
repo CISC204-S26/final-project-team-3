@@ -99,16 +99,16 @@ shape = SubResource("RectangleShape2D_cr3cd")
 position = Vector2(39, 596)
 shape = SubResource("RectangleShape2D_mjd5i")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=2015544001]
+[node name="gull 2d" type="Area2D" parent="." unique_id=2015544001]
 position = Vector2(-135, 76)
 
-[node name="TheGull" type="Sprite2D" parent="Area2D" unique_id=2097606642]
+[node name="TheGull" type="Sprite2D" parent="gull 2d" unique_id=2097606642]
 position = Vector2(131, 96)
 scale = Vector2(0.39518413, 0.36685553)
 texture = ExtResource("7_mjd5i")
 script = ExtResource("8_t0rxu")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1663207712]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gull 2d" unique_id=1663207712]
 position = Vector2(160, 91)
 scale = Vector2(5.705886, 5.2666683)
 shape = SubResource("RectangleShape2D_jl8ns")
@@ -124,5 +124,7 @@ shape = SubResource("RectangleShape2D_t0rxu")
 position = Vector2(2.5, 324.5)
 shape = SubResource("RectangleShape2D_2fno3")
 
-[connection signal="body_entered" from="Area2D" to="crab" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="gull 2d" to="crab" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="crab boundary" to="crab" method="_on_crab_boundary_body_entered"]
+[connection signal="body_entered" from="crab boundary" to="gull 2d/TheGull" method="_on_crab_boundary_body_entered"]
+[connection signal="body_entered" from="crab boundary" to="gull 2d/CollisionShape2D" method="_on_crab_boundary_body_entered"]

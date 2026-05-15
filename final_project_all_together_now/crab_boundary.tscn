@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://b6k7r67f62wnx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5cat"]
+size = Vector2(1176, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5njef"]
+size = Vector2(25, 669)
+
+[node name="crab boundary" type="Area2D" unique_id=1507528224]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2133508438]
+position = Vector2(578, 661)
+shape = SubResource("RectangleShape2D_s5cat")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1533170868]
+position = Vector2(2.5, 324.5)
+shape = SubResource("RectangleShape2D_5njef")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1215563452]
