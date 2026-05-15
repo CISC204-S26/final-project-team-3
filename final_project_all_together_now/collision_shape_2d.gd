@@ -11,7 +11,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	position = position + movement_speed*movement_direction*delta 
+	#position = position + movement_speed*movement_direction*delta 
 
 
 #func _on_crab_boundary_body_entered(body: Node2D) -> void:
