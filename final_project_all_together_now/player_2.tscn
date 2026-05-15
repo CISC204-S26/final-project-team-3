@@ -3,23 +3,80 @@
 [ext_resource type="Script" uid="uid://brqcww1acbwmp" path="res://player_2wave.gd" id="1_8xjnt"]
 [ext_resource type="Texture2D" uid="uid://dhe7d537l8ll0" path="res://wave.png" id="2_ufh5k"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_x3sgo"]
-radius = 103.392456
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ufh5k"]
+size = Vector2(268, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3sgo"]
+size = Vector2(111, 125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jaoer"]
+size = Vector2(20, 88)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ryqyf"]
-size = Vector2(191, 44)
+size = Vector2(193.5, 25.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1hlws"]
-size = Vector2(95, 114)
+size = Vector2(118.5, 107)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0jhxp"]
-size = Vector2(54, 27)
+size = Vector2(61, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6iqoo"]
-size = Vector2(91, 92.5)
+size = Vector2(59.25, 95.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8xjnt"]
-size = Vector2(540.5, 73)
+size = Vector2(11.625, 65.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8lhrm"]
+size = Vector2(107, 86.625)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_up5o4"]
+size = Vector2(46, 32.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wh5uk"]
+size = Vector2(126, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehhk3"]
+size = Vector2(2.6824036, 37.710785)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mt4e1"]
+size = Vector2(61, 14.901764)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7d0q2"]
+size = Vector2(46.591286, 12.322845)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8yx1g"]
+size = Vector2(58.95453, 8.999466)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pe21x"]
+size = Vector2(88.75, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_at6ig"]
+size = Vector2(61, 11.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7egp"]
+size = Vector2(46, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ayiqd"]
+size = Vector2(20, 4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vl7il"]
+size = Vector2(89.67503, 10.525299)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6imt3"]
+size = Vector2(41.869514, 7)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y762y"]
+size = Vector2(24, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_14lsy"]
+size = Vector2(84, 7.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbeff"]
+size = Vector2(50, 5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tw1wg"]
+size = Vector2(40.58737, 15.332108)
 
 [node name="player2" type="Node2D" unique_id=403489986]
 
@@ -32,33 +89,190 @@ position = Vector2(243, 487)
 texture = ExtResource("2_ufh5k")
 
 [node name="wavebarrier" type="CollisionShape2D" parent="player2(wave)" unique_id=1156014512]
-position = Vector2(258, 450)
-shape = SubResource("CircleShape2D_x3sgo")
+position = Vector2(221, 628)
+shape = SubResource("RectangleShape2D_ufh5k")
 
 [node name="wavebarrier2" type="CollisionShape2D" parent="player2(wave)" unique_id=1844364038]
-position = Vector2(150, 550)
-shape = SubResource("CircleShape2D_x3sgo")
+position = Vector2(287, 457)
+shape = SubResource("RectangleShape2D_x3sgo")
 
 [node name="wavebarrier3" type="CollisionShape2D" parent="player2(wave)" unique_id=945845468]
-position = Vector2(223, 490)
-shape = SubResource("CircleShape2D_x3sgo")
+position = Vector2(351, 442)
+shape = SubResource("RectangleShape2D_jaoer")
 
 [node name="wavebarrier4" type="CollisionShape2D" parent="player2(wave)" unique_id=1641028973]
-position = Vector2(429.5, 603)
+position = Vector2(426.25, 600.125)
 shape = SubResource("RectangleShape2D_ryqyf")
 
 [node name="wavebarrier5" type="CollisionShape2D" parent="player2(wave)" unique_id=2108082714]
-position = Vector2(287, 586)
+position = Vector2(270, 572)
 shape = SubResource("RectangleShape2D_1hlws")
 
 [node name="wavebarrier6" type="CollisionShape2D" parent="player2(wave)" unique_id=328643128]
-position = Vector2(375, 499)
+position = Vector2(371.5, 499)
 shape = SubResource("RectangleShape2D_0jhxp")
 
 [node name="wavebarrier7" type="CollisionShape2D" parent="player2(wave)" unique_id=132434787]
-position = Vector2(39, 596)
+position = Vector2(62.375, 593)
 shape = SubResource("RectangleShape2D_6iqoo")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player2(wave)" unique_id=1461239468]
-position = Vector2(248.25, 629)
+[node name="wavebarrier8" type="CollisionShape2D" parent="player2(wave)" unique_id=1461239468]
+position = Vector2(127, 482)
 shape = SubResource("RectangleShape2D_8xjnt")
+
+[node name="wavebarrier9" type="CollisionShape2D" parent="player2(wave)" unique_id=1528410277]
+position = Vector2(186, 471)
+shape = SubResource("RectangleShape2D_8lhrm")
+
+[node name="wavebarrier10" type="CollisionShape2D" parent="player2(wave)" unique_id=1158164162]
+position = Vector2(73, 530.375)
+shape = SubResource("RectangleShape2D_up5o4")
+
+[node name="wavebarrier11" type="CollisionShape2D" parent="player2(wave)" unique_id=1619208503]
+position = Vector2(287, 642)
+shape = SubResource("RectangleShape2D_wh5uk")
+
+[node name="wavebarrier12" type="CollisionShape2D" parent="player2(wave)" unique_id=1062449445]
+position = Vector2(211, 641.00006)
+rotation = -1.3338919
+scale = Vector2(3.1129441, 0.8774539)
+shape = SubResource("RectangleShape2D_ehhk3")
+
+[node name="wavebarrier13" type="CollisionShape2D" parent="player2(wave)" unique_id=392001880]
+position = Vector2(258.7276, 647.05)
+rotation = 0.14594902
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_mt4e1")
+
+[node name="wavebarrier14" type="CollisionShape2D" parent="player2(wave)" unique_id=499170816]
+position = Vector2(310.22742, 650.63916)
+rotation = -0.09409538
+shape = SubResource("RectangleShape2D_7d0q2")
+
+[node name="wavebarrier15" type="CollisionShape2D" parent="player2(wave)" unique_id=1082892226]
+position = Vector2(148.75, 568)
+shape = SubResource("RectangleShape2D_1hlws")
+
+[node name="wavebarrier16" type="CollisionShape2D" parent="player2(wave)" unique_id=686528856]
+position = Vector2(36, 565)
+shape = SubResource("RectangleShape2D_0jhxp")
+
+[node name="wavebarrier17" type="CollisionShape2D" parent="player2(wave)" unique_id=432512508]
+position = Vector2(47, 590)
+shape = SubResource("RectangleShape2D_0jhxp")
+
+[node name="wavebarrier18" type="CollisionShape2D" parent="player2(wave)" unique_id=956619254]
+position = Vector2(37, 600)
+shape = SubResource("RectangleShape2D_0jhxp")
+
+[node name="wavebarrier19" type="CollisionShape2D" parent="player2(wave)" unique_id=778159120]
+position = Vector2(116, 489)
+shape = SubResource("RectangleShape2D_8xjnt")
+
+[node name="wavebarrier20" type="CollisionShape2D" parent="player2(wave)" unique_id=1115473499]
+position = Vector2(105, 496)
+shape = SubResource("RectangleShape2D_8xjnt")
+
+[node name="wavebarrier21" type="CollisionShape2D" parent="player2(wave)" unique_id=1738322191]
+position = Vector2(94, 504)
+shape = SubResource("RectangleShape2D_8xjnt")
+
+[node name="wavebarrier22" type="CollisionShape2D" parent="player2(wave)" unique_id=1700819872]
+position = Vector2(84, 511)
+shape = SubResource("RectangleShape2D_8xjnt")
+
+[node name="wavebarrier23" type="CollisionShape2D" parent="player2(wave)" unique_id=953668263]
+position = Vector2(110.235794, 458.46768)
+rotation = -0.60083365
+shape = SubResource("RectangleShape2D_8yx1g")
+
+[node name="wavebarrier24" type="CollisionShape2D" parent="player2(wave)" unique_id=1398106131]
+position = Vector2(70.60477, 492.6942)
+rotation = -0.86261827
+shape = SubResource("RectangleShape2D_8yx1g")
+
+[node name="wavebarrier25" type="CollisionShape2D" parent="player2(wave)" unique_id=1440906343]
+position = Vector2(74, 524)
+shape = SubResource("RectangleShape2D_8xjnt")
+
+[node name="wavebarrier26" type="CollisionShape2D" parent="player2(wave)" unique_id=1492825788]
+position = Vector2(64, 535)
+shape = SubResource("RectangleShape2D_8xjnt")
+
+[node name="wavebarrier27" type="CollisionShape2D" parent="player2(wave)" unique_id=835671065]
+position = Vector2(192, 421)
+shape = SubResource("RectangleShape2D_pe21x")
+
+[node name="wavebarrier28" type="CollisionShape2D" parent="player2(wave)" unique_id=275731911]
+position = Vector2(212, 406)
+shape = SubResource("RectangleShape2D_pe21x")
+
+[node name="wavebarrier29" type="CollisionShape2D" parent="player2(wave)" unique_id=621641602]
+position = Vector2(233.625, 391)
+shape = SubResource("RectangleShape2D_pe21x")
+
+[node name="wavebarrier30" type="CollisionShape2D" parent="player2(wave)" unique_id=649063270]
+position = Vector2(261, 376)
+shape = SubResource("RectangleShape2D_pe21x")
+
+[node name="wavebarrier31" type="CollisionShape2D" parent="player2(wave)" unique_id=1314295798]
+position = Vector2(293, 391)
+shape = SubResource("RectangleShape2D_pe21x")
+
+[node name="wavebarrier32" type="CollisionShape2D" parent="player2(wave)" unique_id=1718987733]
+position = Vector2(261.5, 363)
+shape = SubResource("RectangleShape2D_at6ig")
+
+[node name="wavebarrier33" type="CollisionShape2D" parent="player2(wave)" unique_id=1221350360]
+position = Vector2(262, 353.5)
+shape = SubResource("RectangleShape2D_y7egp")
+
+[node name="wavebarrier34" type="CollisionShape2D" parent="player2(wave)" unique_id=2124910408]
+position = Vector2(261, 348)
+shape = SubResource("RectangleShape2D_ayiqd")
+
+[node name="wavebarrier35" type="CollisionShape2D" parent="player2(wave)" unique_id=332269066]
+position = Vector2(277, 349.99997)
+rotation = 0.3203279
+shape = SubResource("RectangleShape2D_ayiqd")
+
+[node name="wavebarrier36" type="CollisionShape2D" parent="player2(wave)" unique_id=860149007]
+position = Vector2(243, 351)
+rotation = -0.36879113
+shape = SubResource("RectangleShape2D_ayiqd")
+
+[node name="wavebarrier37" type="CollisionShape2D" parent="player2(wave)" unique_id=21620613]
+position = Vector2(193, 392)
+rotation = -0.55305356
+shape = SubResource("RectangleShape2D_vl7il")
+
+[node name="wavebarrier38" type="CollisionShape2D" parent="player2(wave)" unique_id=1676545862]
+position = Vector2(138, 430.00003)
+rotation = -0.9536952
+shape = SubResource("RectangleShape2D_6imt3")
+
+[node name="wavebarrier39" type="CollisionShape2D" parent="player2(wave)" unique_id=472081064]
+position = Vector2(317, 378.5)
+shape = SubResource("RectangleShape2D_y762y")
+
+[node name="wavebarrier40" type="CollisionShape2D" parent="player2(wave)" unique_id=454595857]
+position = Vector2(345, 397)
+shape = SubResource("RectangleShape2D_y762y")
+
+[node name="wavebarrier41" type="CollisionShape2D" parent="player2(wave)" unique_id=1889907145]
+position = Vector2(11, 639.875)
+shape = SubResource("RectangleShape2D_14lsy")
+
+[node name="wavebarrier42" type="CollisionShape2D" parent="player2(wave)" unique_id=1047814200]
+position = Vector2(406, 606)
+shape = SubResource("RectangleShape2D_ryqyf")
+
+[node name="wavebarrier43" type="CollisionShape2D" parent="player2(wave)" unique_id=1022324144]
+position = Vector2(483, 584)
+shape = SubResource("RectangleShape2D_hbeff")
+
+[node name="wavebarrier44" type="CollisionShape2D" parent="player2(wave)" unique_id=278102410]
+position = Vector2(338.6203, 582.89386)
+rotation = 0.51097625
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_tw1wg")
