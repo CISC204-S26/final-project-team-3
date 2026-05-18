@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bayhy1ldadapu" path="res://player_2.tscn" id="1_4jy4h"]
 [ext_resource type="PackedScene" uid="uid://ddw66l7a37l73" path="res://crab.tscn" id="2_hvdck"]
 [ext_resource type="Script" uid="uid://cb2l8vncv88c2" path="res://cross_6.gd" id="3_hvdck"]
+[ext_resource type="Script" uid="uid://ctb1fmp21kaw4" path="res://cross_funeral.gd" id="4_wdknq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wdknq"]
 size = Vector2(310, 37)
@@ -13,6 +14,12 @@ size = Vector2(152, 221)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1hu04"]
 size = Vector2(309, 20)
 
+[sub_resource type="BoxMesh" id="BoxMesh_wdknq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xdujs"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1hu04"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4jy4h"]
 size = Vector2(3369, 20)
 
@@ -21,6 +28,9 @@ size = Vector2(25, 669)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cnnus"]
 size = Vector2(224, 146)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xyvh2"]
+size = Vector2(67, 160)
 
 [node name="crossroads" type="Node2D" unique_id=1956171025]
 
@@ -51,6 +61,24 @@ shape = SubResource("RectangleShape2D_xdujs")
 position = Vector2(1075, 629)
 shape = SubResource("RectangleShape2D_1hu04")
 
+[node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D" unique_id=1921308109]
+self_modulate = Color(1, 0.8156863, 0.3647059, 1)
+position = Vector2(149.125, 589.625)
+scale = Vector2(321.75, 162.74998)
+mesh = SubResource("BoxMesh_wdknq")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="StaticBody2D" unique_id=538784837]
+self_modulate = Color(1, 0.8156863, 0.3647059, 1)
+position = Vector2(1073.875, 300.375)
+scale = Vector2(160.24995, 225.25)
+mesh = SubResource("BoxMesh_xdujs")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="StaticBody2D" unique_id=1811708803]
+self_modulate = Color(1, 0.8156863, 0.3647059, 1)
+position = Vector2(1072.875, 649.375)
+scale = Vector2(310.24997, 61.250015)
+mesh = SubResource("BoxMesh_1hu04")
+
 [node name="crab boundary" type="Area2D" parent="." unique_id=1354335475]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="crab boundary" unique_id=299804285]
@@ -69,5 +97,24 @@ position = Vector2(1181, 100)
 shape = SubResource("RectangleShape2D_cnnus")
 debug_color = Color(0.54059505, 0.56393844, 0.18579644, 0.41960785)
 
+[node name="cross-funeral" type="Area2D" parent="." unique_id=216713565]
+script = ExtResource("4_wdknq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cross-funeral" unique_id=989180470]
+position = Vector2(1128, 518)
+shape = SubResource("RectangleShape2D_xyvh2")
+debug_color = Color(0.5419225, 0.5612049, 0.23716071, 0.41960785)
+
+[node name="honor her" type="RichTextLabel" parent="cross-funeral" unique_id=551349860]
+visible = false
+offset_left = 803.0
+offset_top = 432.0
+offset_right = 1161.0
+offset_bottom = 513.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "NOT ENOUGH PEOPLE INVITED
+YOU MUST HONOR HER MEMORY"
+
 [connection signal="body_entered" from="crab boundary" to="crab" method="_on_crab_boundary_body_entered"]
 [connection signal="body_entered" from="cross-6" to="cross-6" method="_on_body_entered"]
+[connection signal="body_entered" from="cross-funeral" to="cross-funeral" method="_on_body_entered"]

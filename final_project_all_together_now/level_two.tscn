@@ -25,6 +25,12 @@ size = Vector2(391, 43.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3k6fr"]
 size = Vector2(566, 58)
 
+[sub_resource type="BoxMesh" id="BoxMesh_ook2w"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_q0uq4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_c6k8r"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cnkpv"]
 size = Vector2(3236, 18)
 
@@ -81,6 +87,24 @@ shape = SubResource("RectangleShape2D_ca72b")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=2123936717]
 position = Vector2(2927, 569)
 shape = SubResource("RectangleShape2D_3k6fr")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="StaticBody2D" unique_id=889617379]
+self_modulate = Color(1, 0.8156863, 0.3647059, 1)
+position = Vector2(1362.5, 227.5)
+scale = Vector2(425, 54.99998)
+mesh = SubResource("BoxMesh_ook2w")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="StaticBody2D" unique_id=70026507]
+self_modulate = Color(1, 0.8156863, 0.3647059, 1)
+position = Vector2(2120.5, 361)
+scale = Vector2(393, -51.999977)
+mesh = SubResource("BoxMesh_q0uq4")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="StaticBody2D" unique_id=1347801347]
+self_modulate = Color(1, 0.8156863, 0.3647059, 1)
+position = Vector2(2926.625, 570.375)
+scale = Vector2(568.75006, 63.24998)
+mesh = SubResource("BoxMesh_c6k8r")
 
 [node name="crab boundary" type="Area2D" parent="." unique_id=806760955]
 
