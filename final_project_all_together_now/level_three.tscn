@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://bkb7ppe8yko3j" path="res://audio/the gull.mp3" id="7_dgghw"]
 [ext_resource type="AudioStream" uid="uid://eh7uulgqhuu6" path="res://audio/cartoon chomp.mp3" id="8_gyaej"]
 [ext_resource type="Script" uid="uid://c1kh4gngbyjyp" path="res://lvl_3_4.gd" id="10_wopty"]
+[ext_resource type="PackedScene" uid="uid://b7qhrcfywba0i" path="res://background.tscn" id="11_dgghw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cxaom"]
 size = Vector2(276, 216)
@@ -180,6 +181,9 @@ script = ExtResource("10_wopty")
 position = Vector2(2745, 267)
 shape = SubResource("RectangleShape2D_dgghw")
 debug_color = Color(0.5036323, 0.576665, 0.18985137, 0.41960785)
+
+[node name="background" parent="." unique_id=1548312234 instance=ExtResource("11_dgghw")]
+z_index = -1
 
 [connection signal="body_entered" from="crab boundary" to="crab" method="_on_crab_boundary_body_entered"]
 [connection signal="body_entered" from="Path2D/gullfollowlvl3/gull 2d" to="crab" method="_on_gull_2d_body_entered"]

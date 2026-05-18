@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ddw66l7a37l73" path="res://crab.tscn" id="2_hvdck"]
 [ext_resource type="Script" uid="uid://cb2l8vncv88c2" path="res://cross_6.gd" id="3_hvdck"]
 [ext_resource type="Script" uid="uid://ctb1fmp21kaw4" path="res://cross_funeral.gd" id="4_wdknq"]
+[ext_resource type="PackedScene" uid="uid://b7qhrcfywba0i" path="res://background.tscn" id="5_xdujs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wdknq"]
 size = Vector2(310, 37)
@@ -114,6 +115,9 @@ offset_bottom = 513.0
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "NOT ENOUGH PEOPLE INVITED
 YOU MUST HONOR HER MEMORY"
+
+[node name="background" parent="." unique_id=1548312234 instance=ExtResource("5_xdujs")]
+z_index = -1
 
 [connection signal="body_entered" from="crab boundary" to="crab" method="_on_crab_boundary_body_entered"]
 [connection signal="body_entered" from="cross-6" to="cross-6" method="_on_body_entered"]

@@ -1,5 +1,59 @@
 [gd_scene format=3 uid="uid://b7qhrcfywba0i"]
 
+[ext_resource type="Texture2D" uid="uid://c10bbodqw4wbd" path="res://assets/skye.png" id="1_splo0"]
+[ext_resource type="Texture2D" uid="uid://cyumr1idtwiwl" path="res://assets/sand.png" id="2_eq6nc"]
+[ext_resource type="Texture2D" uid="uid://qnogo8o5jh1n" path="res://palmtree.png" id="3_bpugw"]
+[ext_resource type="Texture2D" uid="uid://bes3tgnhrg41s" path="res://assets/water.png" id="4_gjjrj"]
+
 [node name="background" type="Node2D" unique_id=1548312234]
 
-[node name="Parallax2D" type="Parallax2D" parent="." unique_id=2059185003]
+[node name="sky" type="Parallax2D" parent="." unique_id=2059185003]
+scroll_scale = Vector2(0, 0)
+repeat_size = Vector2(484, 0)
+repeat_times = 10
+
+[node name="Skye" type="Sprite2D" parent="sky" unique_id=897328421]
+position = Vector2(389.00003, 311)
+scale = Vector2(0.15974997, 0.15974997)
+texture = ExtResource("1_splo0")
+
+[node name="sand" type="Parallax2D" parent="." unique_id=1836004249]
+scroll_scale = Vector2(0.3, 0.3)
+repeat_size = Vector2(458.1, 0)
+repeat_times = 10
+
+[node name="Sand" type="Sprite2D" parent="sand" unique_id=732978592]
+position = Vector2(290.17184, 480.9375)
+scale = Vector2(0.12453127, 0.12453127)
+texture = ExtResource("2_eq6nc")
+
+[node name="trees" type="Parallax2D" parent="." unique_id=2048659250]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(100, 0)
+repeat_times = 50
+
+[node name="Palmtree" type="Sprite2D" parent="trees" unique_id=151519313]
+position = Vector2(71, 301)
+scale = Vector2(0.45192304, 0.45192298)
+texture = ExtResource("3_bpugw")
+
+[node name="trees2" type="Parallax2D" parent="." unique_id=33864431]
+scroll_scale = Vector2(0.2, 0.2)
+repeat_size = Vector2(100, 0)
+repeat_times = 50
+
+[node name="Palmtree" type="Sprite2D" parent="trees2" unique_id=1511674983]
+position = Vector2(120, 321.00003)
+rotation = -0.3298672
+scale = Vector2(0.46585155, 0.46585152)
+texture = ExtResource("3_bpugw")
+
+[node name="water" type="Parallax2D" parent="." unique_id=1153932289]
+scroll_scale = Vector2(0.4, 0.4)
+repeat_size = Vector2(230, 0)
+repeat_times = 20
+
+[node name="Water" type="Sprite2D" parent="water" unique_id=1177150657]
+position = Vector2(302, 670)
+scale = Vector2(0.13274996, 0.13274997)
+texture = ExtResource("4_gjjrj")

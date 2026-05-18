@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bayhy1ldadapu" path="res://player_2.tscn" id="2_foyw7"]
 [ext_resource type="PackedScene" uid="uid://b5dlrviuslbp0" path="res://crabs_to_be_invited.tscn" id="3_foyw7"]
 [ext_resource type="Script" path="res://win.gd" id="4_eck3n"]
+[ext_resource type="PackedScene" uid="uid://b7qhrcfywba0i" path="res://background.tscn" id="5_xsnk2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eck3n"]
 size = Vector2(454, 273.5)
@@ -112,6 +113,9 @@ script = ExtResource("4_eck3n")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="win" unique_id=809899939]
 position = Vector2(-1, 17)
 shape = SubResource("RectangleShape2D_0l1we")
+
+[node name="background" parent="." unique_id=1548312234 instance=ExtResource("5_xsnk2")]
+z_index = -1
 
 [connection signal="body_entered" from="crab boundary" to="." method="_on_crab_boundary_body_entered"]
 [connection signal="body_entered" from="crab boundary" to="crab" method="_on_crab_boundary_body_entered"]

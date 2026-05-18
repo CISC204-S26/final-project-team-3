@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://eh7uulgqhuu6" path="res://audio/cartoon chomp.mp3" id="8_4177m"]
 [ext_resource type="PackedScene" uid="uid://b5dlrviuslbp0" path="res://crabs_to_be_invited.tscn" id="9_5084y"]
 [ext_resource type="Script" uid="uid://brrundrcditsk" path="res://lvl_5_4.gd" id="10_2g0sv"]
+[ext_resource type="PackedScene" uid="uid://b7qhrcfywba0i" path="res://background.tscn" id="11_4gibq"]
 
 [sub_resource type="Curve2D" id="Curve2D_d42oc"]
 _data = {
@@ -132,6 +133,9 @@ script = ExtResource("10_2g0sv")
 position = Vector2(1855, 398)
 shape = SubResource("RectangleShape2D_4gibq")
 debug_color = Color(0.48277527, 0.5837406, 0.17758682, 0.41960785)
+
+[node name="background" parent="." unique_id=1548312234 instance=ExtResource("11_4gibq")]
+z_index = -1
 
 [connection signal="body_entered" from="Path2D2/gullfollowlvl3/gull 2d" to="crab" method="_on_gull_2d_body_entered"]
 [connection signal="body_entered" from="crab boundary" to="crab" method="_on_crab_boundary_body_entered"]

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cn0dfkqai3slg" path="res://assets/casket.png" id="3_uu5uj"]
 [ext_resource type="Texture2D" uid="uid://ckyloqb8ch21d" path="res://CRAB.png" id="4_e2ho1"]
 [ext_resource type="Texture2D" uid="uid://by6l3okyidlip" path="res://Screenshot 2026-05-07 at 2.33.42 PM.png" id="4_ll2pm"]
+[ext_resource type="Texture2D" uid="uid://c721utct58kxk" path="res://assets/titanic.png" id="4_wfgcr"]
 
 [node name="funeral" type="Node2D" unique_id=161323013]
 
@@ -33,6 +34,12 @@ texture = ExtResource("4_e2ho1")
 position = Vector2(1133.0001, 552)
 scale = Vector2(0.027343744, 0.026123041)
 texture = ExtResource("4_e2ho1")
+
+[node name="Titanic" type="Sprite2D" parent="." unique_id=1601684562]
+modulate = Color(0.20975551, 0.3718924, 0.8798074, 1)
+position = Vector2(634, 226.00002)
+scale = Vector2(0.9220679, 0.9220679)
+texture = ExtResource("4_wfgcr")
 
 [node name="Casket" type="Sprite2D" parent="." unique_id=1555103370]
 position = Vector2(751, 450)

@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://bkb7ppe8yko3j" path="res://audio/the gull.mp3" id="6_ca72b"]
 [ext_resource type="AudioStream" uid="uid://eh7uulgqhuu6" path="res://audio/cartoon chomp.mp3" id="9_e4814"]
 [ext_resource type="Script" uid="uid://bomw2w8yxkhgs" path="res://transitiontolvl_3.gd" id="10_ook2w"]
+[ext_resource type="PackedScene" uid="uid://b7qhrcfywba0i" path="res://background.tscn" id="11_q0uq4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfs58"]
 size = Vector2(315, 34)
@@ -72,8 +73,8 @@ shape = SubResource("RectangleShape2D_lfs58")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="StaticBody2D" unique_id=1935431668]
 self_modulate = Color(1, 0.8156863, 0.3647059, 1)
-position = Vector2(162.625, 435.375)
-scale = Vector2(318.75, 39.250053)
+position = Vector2(156.99998, 543.375)
+scale = Vector2(329.99997, 255.25003)
 mesh = SubResource("BoxMesh_m7216")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1988017098]
@@ -157,6 +158,9 @@ script = ExtResource("10_ook2w")
 position = Vector2(3095.875, 342)
 shape = SubResource("RectangleShape2D_q0uq4")
 debug_color = Color(0.47244817, 0.58458614, 0.23436007, 0.41960785)
+
+[node name="background" parent="." unique_id=1548312234 instance=ExtResource("11_q0uq4")]
+z_index = -1
 
 [connection signal="body_entered" from="crab boundary" to="crab" method="_on_crab_boundary_body_entered"]
 [connection signal="body_entered" from="crab boundary" to="crab boundary" method="_on_body_entered"]
