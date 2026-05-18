@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://crckakky21pvr"]
+
+[ext_resource type="Texture2D" uid="uid://clp60ac1yxuu5" path="res://assets/Screenshot 2026-05-18 at 12.19.21 AM.png" id="1_k5wiu"]
+[ext_resource type="Texture2D" uid="uid://cn0dfkqai3slg" path="res://assets/casket.png" id="3_uu5uj"]
+[ext_resource type="Texture2D" uid="uid://ckyloqb8ch21d" path="res://CRAB.png" id="4_e2ho1"]
+[ext_resource type="Texture2D" uid="uid://by6l3okyidlip" path="res://Screenshot 2026-05-07 at 2.33.42 PM.png" id="4_ll2pm"]
+
+[node name="funeral" type="Node2D" unique_id=161323013]
+
+[node name="beach" type="Sprite2D" parent="." unique_id=1486628269]
+position = Vector2(581, 593.5)
+scale = Vector2(63.777775, 9.071426)
+texture = ExtResource("4_ll2pm")
+
+[node name="water" type="Sprite2D" parent="." unique_id=244906978]
+modulate = Color(0.21176471, 1, 0.8156863, 0.105882354)
+visibility_layer = 3
+position = Vector2(576, 325)
+scale = Vector2(0.819464, 0.6339623)
+texture = ExtResource("1_k5wiu")
+
+[node name="Crab4" type="Sprite2D" parent="." unique_id=1483392628]
+position = Vector2(52, 544)
+scale = Vector2(0.048828125, 0.05682375)
+texture = ExtResource("4_e2ho1")
+
+[node name="Crab5" type="Sprite2D" parent="." unique_id=141547645]
+position = Vector2(1114, 631)
+scale = Vector2(0.049560566, 0.051727284)
+texture = ExtResource("4_e2ho1")
+
+[node name="Crab7" type="Sprite2D" parent="." unique_id=301011602]
+position = Vector2(1133.0001, 552)
+scale = Vector2(0.027343744, 0.026123041)
+texture = ExtResource("4_e2ho1")
+
+[node name="Casket" type="Sprite2D" parent="." unique_id=1555103370]
+position = Vector2(751, 450)
+scale = Vector2(1.1378158, 1.1581081)
+texture = ExtResource("3_uu5uj")
+
+[node name="Crab" type="Sprite2D" parent="." unique_id=1300003159]
+position = Vector2(224, 529)
+scale = Vector2(0.22741699, 0.26733395)
+texture = ExtResource("4_e2ho1")
+
+[node name="Crab3" type="Sprite2D" parent="." unique_id=194025077]
+position = Vector2(412, 531)
+scale = Vector2(0.066894524, 0.0736084)
+texture = ExtResource("4_e2ho1")
+
+[node name="Crab2" type="Sprite2D" parent="." unique_id=1421174115]
+position = Vector2(633.75, 608.96875)
+scale = Vector2(0.049560566, 0.051727284)
+texture = ExtResource("4_e2ho1")
+
+[node name="Crab6" type="Sprite2D" parent="." unique_id=1051139817]
+position = Vector2(734.37494, 623)
+scale = Vector2(0.057983376, 0.05712891)
+texture = ExtResource("4_e2ho1")
+
+[node name="Crab8" type="Sprite2D" parent="." unique_id=28122310]
+position = Vector2(655, 641.00006)
+scale = Vector2(0.027343744, 0.026123041)
+texture = ExtResource("4_e2ho1")
+
+[node name="beach2" type="Sprite2D" parent="." unique_id=126022625]
+modulate = Color(0.34509805, 1, 0.8156863, 0.15294118)
+visibility_layer = 3
+position = Vector2(576, 325)
+scale = Vector2(0.819464, 0.6339623)
+texture = ExtResource("1_k5wiu")
