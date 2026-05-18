@@ -18,7 +18,7 @@ scale = Vector2(0.15974997, 0.15974997)
 texture = ExtResource("1_splo0")
 
 [node name="sand" type="Parallax2D" parent="." unique_id=1836004249]
-scroll_scale = Vector2(0.3, 0.3)
+scroll_scale = Vector2(0.3, 0.15)
 repeat_size = Vector2(458.1, 0)
 repeat_times = 10
 
@@ -28,7 +28,7 @@ scale = Vector2(0.12453127, 0.12453127)
 texture = ExtResource("2_eq6nc")
 
 [node name="trees" type="Parallax2D" parent="." unique_id=2048659250]
-scroll_scale = Vector2(0.1, 0.1)
+scroll_scale = Vector2(0.1, 0.05)
 repeat_size = Vector2(100, 0)
 repeat_times = 50
 
@@ -38,7 +38,7 @@ scale = Vector2(0.45192304, 0.45192298)
 texture = ExtResource("3_bpugw")
 
 [node name="trees2" type="Parallax2D" parent="." unique_id=33864431]
-scroll_scale = Vector2(0.2, 0.2)
+scroll_scale = Vector2(0.2, 0.1)
 repeat_size = Vector2(100, 0)
 repeat_times = 50
 
@@ -49,7 +49,7 @@ scale = Vector2(0.46585155, 0.46585152)
 texture = ExtResource("3_bpugw")
 
 [node name="water" type="Parallax2D" parent="." unique_id=1153932289]
-scroll_scale = Vector2(0.4, 0.4)
+scroll_scale = Vector2(0.4, 0.2)
 repeat_size = Vector2(230, 0)
 repeat_times = 20
 

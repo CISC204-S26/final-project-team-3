@@ -117,6 +117,18 @@ shape = SubResource("RectangleShape2D_0l1we")
 [node name="background" parent="." unique_id=1548312234 instance=ExtResource("5_xsnk2")]
 z_index = -1
 
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1041719315]
+offset_left = 5.0
+offset_top = 377.0
+offset_right = 444.0
+offset_bottom = 566.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "WASD to control the crab
+Arrow Keys to control the Wave
+Remember, there needs to be enough crabs invited to
+the funeral, if you dont get enough she will know
+(Also the wave can't move up if the crab is on it, bc gravity)"
+
 [connection signal="body_entered" from="crab boundary" to="." method="_on_crab_boundary_body_entered"]
 [connection signal="body_entered" from="crab boundary" to="crab" method="_on_crab_boundary_body_entered"]
 [connection signal="body_entered" from="crab boundary" to="crab boundary" method="_on_body_entered"]
