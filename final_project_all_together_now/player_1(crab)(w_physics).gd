@@ -53,3 +53,14 @@ func _on_win_body_entered(body: Node2D) -> void:
 	if body.name == "crab":
 		get_tree().change_scene_to_file("res://level_one.tscn")
 	pass # Replace with function body.
+
+
+func _on_gull_2d_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+	#$"../gull 2d/chomp".play()
+	if body.name == "crab":
+		get_tree().reload_current_scene()
+
+
+func _on_transitiontolvl_3_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

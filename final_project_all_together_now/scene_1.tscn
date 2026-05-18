@@ -58,6 +58,8 @@ texture = ExtResource("2_05u5g")
 
 [node name="crab" type="CharacterBody2D" parent="." unique_id=176305980]
 script = ExtResource("2_1abo5")
+nearby_interactables = null
+current_scene = null
 
 [node name="Sprite2D" type="Sprite2D" parent="crab" unique_id=1759484992]
 position = Vector2(122.00001, 331)

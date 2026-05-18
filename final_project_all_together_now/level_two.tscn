@@ -8,6 +8,8 @@
 [ext_resource type="Script" uid="uid://bg5a7ahgebi8w" path="res://collision_shape_2d.gd" id="5_ca72b"]
 [ext_resource type="PackedScene" uid="uid://b5dlrviuslbp0" path="res://crabs_to_be_invited.tscn" id="6_3k6fr"]
 [ext_resource type="AudioStream" uid="uid://bkb7ppe8yko3j" path="res://audio/the gull.mp3" id="6_ca72b"]
+[ext_resource type="AudioStream" uid="uid://eh7uulgqhuu6" path="res://audio/cartoon chomp.mp3" id="9_e4814"]
+[ext_resource type="Script" uid="uid://bomw2w8yxkhgs" path="res://transitiontolvl_3.gd" id="10_ook2w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfs58"]
 size = Vector2(315, 34)
@@ -35,10 +37,11 @@ _data = {
 }
 point_count = 3
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qv4wy"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ook2w"]
 size = Vector2(14.288656, 13.544304)
 
-[sub_resource type="BoxMesh" id="BoxMesh_3k6fr"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0uq4"]
+size = Vector2(165.75, 353)
 
 [node name="level_two" type="Node2D" unique_id=1856450663]
 
@@ -100,34 +103,39 @@ position = Vector2(204.9966, 167)
 progress = 200.0
 script = ExtResource("4_qv4wy")
 
-[node name="gull 2d" type="Area2D" parent="Path2D/gull follow" unique_id=1277284709]
-position = Vector2(-140, -91)
+[node name="gull 2d" type="Area2D" parent="Path2D/gull follow" unique_id=1323168686]
+position = Vector2(-339.99658, -91)
 
-[node name="TheGull" type="Sprite2D" parent="Path2D/gull follow/gull 2d" unique_id=1746188619]
+[node name="TheGull" type="Sprite2D" parent="Path2D/gull follow/gull 2d" unique_id=1034212423]
 position = Vector2(131, 96)
 scale = Vector2(0.39518413, 0.36685553)
 texture = ExtResource("3_m7216")
 script = ExtResource("4_3k6fr")
-movement_speed = 300
-movement_direction = Vector2(1, 0)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/gull follow/gull 2d" unique_id=1272685110]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/gull follow/gull 2d" unique_id=1372972544]
 position = Vector2(160, 91)
 scale = Vector2(5.705886, 5.2666683)
-shape = SubResource("RectangleShape2D_qv4wy")
+shape = SubResource("RectangleShape2D_ook2w")
 script = ExtResource("5_ca72b")
-movement_speed = 300
-movement_direction = Vector2(1, 0)
 
-[node name="reference for gull path" type="MeshInstance2D" parent="Path2D/gull follow/gull 2d" unique_id=569243831]
-visible = false
-position = Vector2(2222.2441, 89)
-scale = Vector2(-4264.36, 60.76068)
-mesh = SubResource("BoxMesh_3k6fr")
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Path2D/gull follow/gull 2d" unique_id=959680241]
+[node name="seagull" type="AudioStreamPlayer2D" parent="Path2D/gull follow/gull 2d" unique_id=758835809]
+position = Vector2(135, -76)
 stream = ExtResource("6_ca72b")
 autoplay = true
 
+[node name="chomp" type="AudioStreamPlayer2D" parent="Path2D/gull follow/gull 2d" unique_id=1989152196]
+stream = ExtResource("9_e4814")
+
+[node name="transitiontolvl3" type="Area2D" parent="." unique_id=74621563]
+script = ExtResource("10_ook2w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="transitiontolvl3" unique_id=1809290007]
+position = Vector2(3095.875, 342)
+shape = SubResource("RectangleShape2D_q0uq4")
+debug_color = Color(0.47244817, 0.58458614, 0.23436007, 0.41960785)
+
 [connection signal="body_entered" from="crab boundary" to="crab" method="_on_crab_boundary_body_entered"]
 [connection signal="body_entered" from="crab boundary" to="crab boundary" method="_on_body_entered"]
+[connection signal="body_entered" from="Path2D/gull follow/gull 2d" to="crab" method="_on_gull_2d_body_entered"]
+[connection signal="area_entered" from="transitiontolvl3" to="transitiontolvl3" method="_on_area_entered"]
+[connection signal="body_entered" from="transitiontolvl3" to="transitiontolvl3" method="_on_body_entered"]

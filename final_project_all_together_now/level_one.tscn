@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ddw66l7a37l73" path="res://crab.tscn" id="1_bo08i"]
 [ext_resource type="PackedScene" uid="uid://bayhy1ldadapu" path="res://player_2.tscn" id="2_foyw7"]
 [ext_resource type="PackedScene" uid="uid://b5dlrviuslbp0" path="res://crabs_to_be_invited.tscn" id="3_foyw7"]
-[ext_resource type="Script" uid="uid://b26rc6ki2iyn1" path="res://win.gd" id="4_eck3n"]
+[ext_resource type="Script" path="res://win.gd" id="4_eck3n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eck3n"]
 size = Vector2(454, 273.5)

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bb1yrm518i8ai"]
+
+[ext_resource type="PackedScene" uid="uid://ddw66l7a37l73" path="res://crab.tscn" id="1_1yx4h"]
+[ext_resource type="PackedScene" uid="uid://bayhy1ldadapu" path="res://player_2.tscn" id="2_m6ubi"]
+[ext_resource type="PackedScene" uid="uid://b5dlrviuslbp0" path="res://crabs_to_be_invited.tscn" id="3_tqi7r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1yx4h"]
+size = Vector2(389, 20)
+
+[node name="level_six" type="Node2D" unique_id=2024746648]
+
+[node name="crab" parent="." unique_id=1071556662 instance=ExtResource("1_1yx4h")]
+position = Vector2(8, 152)
+
+[node name="Camera2D" type="Camera2D" parent="crab" unique_id=1206603388]
+position = Vector2(149, 163)
+limit_left = 0
+limit_top = -1530494976
+limit_right = 1635
+limit_bottom = 640
+
+[node name="player2" parent="." unique_id=403489986 instance=ExtResource("2_m6ubi")]
+position = Vector2(481, 8)
+
+[node name="Crabs to be invited" parent="." unique_id=692358396 instance=ExtResource("3_tqi7r")]
+position = Vector2(990, 114.99997)
+rotation = -0.5794493
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1609735826]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1075742851]
+position = Vector2(149, 529)
+shape = SubResource("RectangleShape2D_1yx4h")

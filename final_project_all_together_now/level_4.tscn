@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://wkcjkjmcrrwu"]
+
+[ext_resource type="PackedScene" uid="uid://ddw66l7a37l73" path="res://crab.tscn" id="1_66w8i"]
+[ext_resource type="PackedScene" uid="uid://bayhy1ldadapu" path="res://player_2.tscn" id="2_80qnk"]
+[ext_resource type="PackedScene" uid="uid://b5dlrviuslbp0" path="res://crabs_to_be_invited.tscn" id="3_cicwn"]
+[ext_resource type="Script" uid="uid://cbgtrf2yegy88" path="res://gullfollowlvl_3.gd" id="4_lj1an"]
+[ext_resource type="Texture2D" uid="uid://2e6p7kije2xh" path="res://assets/the_gull.png" id="5_rrs1j"]
+[ext_resource type="Script" uid="uid://5e1kpmglwucr" path="res://the_gull.gd" id="6_xxbfp"]
+[ext_resource type="Script" uid="uid://bg5a7ahgebi8w" path="res://collision_shape_2d.gd" id="7_0yqnl"]
+[ext_resource type="AudioStream" uid="uid://bkb7ppe8yko3j" path="res://audio/the gull.mp3" id="8_45t7y"]
+[ext_resource type="AudioStream" uid="uid://eh7uulgqhuu6" path="res://audio/cartoon chomp.mp3" id="9_lv3ay"]
+[ext_resource type="Script" uid="uid://cqcceoty72bly" path="res://lvl_4_crossroad.gd" id="10_80qnk"]
+
+[sub_resource type="Curve2D" id="Curve2D_2vyst"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 12, 179, 0, 0, 0, 0, 798, 184, 0, 0, 0, 0, 16, 179)
+}
+point_count = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i4yqx"]
+size = Vector2(14.288656, 13.544304)
+
+[sub_resource type="Curve2D" id="Curve2D_66w8i"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 229, -104, 0, 0, 0, 0, 282, 60, 0, 0, 0, 0, 332, 157, 0, 0, 0, 0, 387, 209, 0, 0, 0, 0, 491, 234, 0, 0, 0, 0, 590, 213, 0, 0, 0, 0, 646, 163, 0, 0, 0, 0, 692, 96, 0, 0, 0, 0, 764, -148)
+}
+point_count = 9
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_80qnk"]
+size = Vector2(14.288656, 13.544304)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cicwn"]
+size = Vector2(262.5, 183)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_66w8i"]
+size = Vector2(473, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xxbfp"]
+size = Vector2(606.5, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lj1an"]
+size = Vector2(3369, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rrs1j"]
+size = Vector2(25, 669)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yqnl"]
+size = Vector2(168.5, 261)
+
+[node name="level_4" type="Node2D" unique_id=1113117979]
+
+[node name="crab" parent="." unique_id=1071556662 instance=ExtResource("1_66w8i")]
+position = Vector2(34, 97)
+
+[node name="Camera2D" type="Camera2D" parent="crab" unique_id=729704230]
+position = Vector2(135, 315)
+limit_left = 0
+limit_top = -1530494976
+limit_right = 3055
+limit_bottom = 645
+
+[node name="player2" parent="." unique_id=403489986 instance=ExtResource("2_80qnk")]
+position = Vector2(434, -3)
+
+[node name="Crabs to be invited2" parent="." unique_id=526631794 instance=ExtResource("3_cicwn")]
+position = Vector2(907, -54)
+
+[node name="Path2D" type="Path2D" parent="." unique_id=1381324911]
+curve = SubResource("Curve2D_2vyst")
+
+[node name="gullfollowlvl3" type="PathFollow2D" parent="Path2D" unique_id=1143944765]
+position = Vector2(12, 179)
+rotation = 0.0063612377
+script = ExtResource("4_lj1an")
+
+[node name="gull 2d" type="Area2D" parent="Path2D/gullfollowlvl3" unique_id=1321293454]
+position = Vector2(-154.17484, 66.59662)
+rotation = -0.9246774
+
+[node name="TheGull" type="Sprite2D" parent="Path2D/gullfollowlvl3/gull 2d" unique_id=1490096302]
+position = Vector2(131, 96)
+scale = Vector2(0.39518413, 0.36685553)
+texture = ExtResource("5_rrs1j")
+script = ExtResource("6_xxbfp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/gullfollowlvl3/gull 2d" unique_id=566420559]
+position = Vector2(160, 91)
+scale = Vector2(5.705886, 5.2666683)
+shape = SubResource("RectangleShape2D_i4yqx")
+script = ExtResource("7_0yqnl")
+
+[node name="seagull" type="AudioStreamPlayer2D" parent="Path2D/gullfollowlvl3/gull 2d" unique_id=1502682674]
+position = Vector2(135, -76)
+stream = ExtResource("8_45t7y")
+autoplay = true
+
+[node name="chomp" type="AudioStreamPlayer2D" parent="Path2D/gullfollowlvl3/gull 2d" unique_id=597809121]
+position = Vector2(215.99658, 12.9999695)
+stream = ExtResource("9_lv3ay")
+
+[node name="Path2D3" type="Path2D" parent="." unique_id=948140648]
+position = Vector2(1618, 0)
+curve = SubResource("Curve2D_2vyst")
+
+[node name="gullfollowlvl3" type="PathFollow2D" parent="Path2D3" unique_id=86104258]
+position = Vector2(12, 179)
+rotation = 0.0063612377
+rotates = false
+script = ExtResource("4_lj1an")
+
+[node name="gull 2d" type="Area2D" parent="Path2D3/gullfollowlvl3" unique_id=880730109]
+position = Vector2(-154.17484, 66.59662)
+rotation = -0.9246774
+
+[node name="TheGull" type="Sprite2D" parent="Path2D3/gullfollowlvl3/gull 2d" unique_id=1627242418]
+position = Vector2(131, 96)
+scale = Vector2(0.39518413, 0.36685553)
+texture = ExtResource("5_rrs1j")
+script = ExtResource("6_xxbfp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D3/gullfollowlvl3/gull 2d" unique_id=1773612646]
+position = Vector2(160, 91)
+scale = Vector2(5.705886, 5.2666683)
+shape = SubResource("RectangleShape2D_i4yqx")
+script = ExtResource("7_0yqnl")
+
+[node name="seagull" type="AudioStreamPlayer2D" parent="Path2D3/gullfollowlvl3/gull 2d" unique_id=586474828]
+position = Vector2(135, -76)
+stream = ExtResource("8_45t7y")
+autoplay = true
+
+[node name="chomp" type="AudioStreamPlayer2D" parent="Path2D3/gullfollowlvl3/gull 2d" unique_id=1016991414]
+position = Vector2(215.99658, 12.9999695)
+stream = ExtResource("9_lv3ay")
+
+[node name="Crabs to be invited" parent="Path2D3/gullfollowlvl3" unique_id=692358396 instance=ExtResource("3_cicwn")]
+position = Vector2(-125.66406, -261.20596)
+rotation = 0.4072817
+
+[node name="Path2D2" type="Path2D" parent="." unique_id=494924537]
+position = Vector2(683, 136)
+curve = SubResource("Curve2D_66w8i")
+
+[node name="gullfollowlvl3" type="PathFollow2D" parent="Path2D2" unique_id=863973520]
+position = Vector2(229, -104)
+rotation = 1.1324598
+rotates = false
+script = ExtResource("4_lj1an")
+
+[node name="gull 2d" type="Area2D" parent="Path2D2/gullfollowlvl3" unique_id=661767485]
+position = Vector2(-154.17484, 66.59662)
+rotation = -0.9246774
+
+[node name="TheGull" type="Sprite2D" parent="Path2D2/gullfollowlvl3/gull 2d" unique_id=1542180679]
+position = Vector2(131, 96)
+scale = Vector2(0.39518413, 0.36685553)
+texture = ExtResource("5_rrs1j")
+script = ExtResource("6_xxbfp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D2/gullfollowlvl3/gull 2d" unique_id=310751602]
+position = Vector2(160, 91)
+scale = Vector2(5.705886, 5.2666683)
+shape = SubResource("RectangleShape2D_80qnk")
+script = ExtResource("7_0yqnl")
+
+[node name="seagull" type="AudioStreamPlayer2D" parent="Path2D2/gullfollowlvl3/gull 2d" unique_id=1791181646]
+position = Vector2(135, -76)
+stream = ExtResource("8_45t7y")
+autoplay = true
+
+[node name="chomp" type="AudioStreamPlayer2D" parent="Path2D2/gullfollowlvl3/gull 2d" unique_id=629628652]
+position = Vector2(215.99658, 12.9999695)
+stream = ExtResource("9_lv3ay")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=657787844]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1510928528]
+position = Vector2(128.75, 555.5)
+shape = SubResource("RectangleShape2D_cicwn")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=802732930]
+position = Vector2(1167, 266)
+shape = SubResource("RectangleShape2D_66w8i")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=931728735]
+position = Vector2(2881.75, 545)
+shape = SubResource("RectangleShape2D_xxbfp")
+
+[node name="crab boundary" type="Area2D" parent="." unique_id=510368144]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crab boundary" unique_id=1614732845]
+position = Vector2(1674.5, 661)
+shape = SubResource("RectangleShape2D_lj1an")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="crab boundary" unique_id=686367232]
+position = Vector2(2.5, 324.5)
+shape = SubResource("RectangleShape2D_rrs1j")
+
+[node name="lvl4-crossroad" type="Area2D" parent="." unique_id=1758404703]
+script = ExtResource("10_80qnk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lvl4-crossroad" unique_id=1653938962]
+position = Vector2(3097, 361.5)
+shape = SubResource("RectangleShape2D_0yqnl")
+debug_color = Color(0.48277527, 0.5837406, 0.17758682, 0.41960785)
+
+[connection signal="body_entered" from="Path2D/gullfollowlvl3/gull 2d" to="crab" method="_on_gull_2d_body_entered"]
+[connection signal="body_entered" from="Path2D3/gullfollowlvl3/gull 2d" to="crab" method="_on_gull_2d_body_entered"]
+[connection signal="body_entered" from="Path2D2/gullfollowlvl3/gull 2d" to="crab" method="_on_gull_2d_body_entered"]
+[connection signal="body_entered" from="crab boundary" to="crab" method="_on_crab_boundary_body_entered"]
+[connection signal="body_entered" from="lvl4-crossroad" to="lvl4-crossroad" method="_on_body_entered"]

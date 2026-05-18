@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://dq2ckrtmbko3j"]
+
+[ext_resource type="PackedScene" uid="uid://bayhy1ldadapu" path="res://player_2.tscn" id="1_4jy4h"]
+[ext_resource type="PackedScene" uid="uid://ddw66l7a37l73" path="res://crab.tscn" id="2_hvdck"]
+[ext_resource type="Script" uid="uid://cb2l8vncv88c2" path="res://cross_6.gd" id="3_hvdck"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wdknq"]
+size = Vector2(310, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xdujs"]
+size = Vector2(152, 221)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hu04"]
+size = Vector2(309, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4jy4h"]
+size = Vector2(3369, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hvdck"]
+size = Vector2(25, 669)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cnnus"]
+size = Vector2(224, 146)
+
+[node name="crossroads" type="Node2D" unique_id=1956171025]
+
+[node name="player2" parent="." unique_id=403489986 instance=ExtResource("1_4jy4h")]
+position = Vector2(465, -14)
+
+[node name="crab" parent="." unique_id=1071556662 instance=ExtResource("2_hvdck")]
+position = Vector2(-14, 152)
+
+[node name="Camera2D" type="Camera2D" parent="crab" unique_id=1959949048]
+position = Vector2(149, 163)
+limit_left = 0
+limit_top = -1530494976
+limit_right = 1138
+limit_bottom = 645
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1525507544]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=183582086]
+position = Vector2(154, 532)
+shape = SubResource("RectangleShape2D_wdknq")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1026575371]
+position = Vector2(1071, 299)
+shape = SubResource("RectangleShape2D_xdujs")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1209479771]
+position = Vector2(1075, 629)
+shape = SubResource("RectangleShape2D_1hu04")
+
+[node name="crab boundary" type="Area2D" parent="." unique_id=1354335475]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="crab boundary" unique_id=299804285]
+position = Vector2(1674.5, 661)
+shape = SubResource("RectangleShape2D_4jy4h")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="crab boundary" unique_id=227160243]
+position = Vector2(2.5, 324.5)
+shape = SubResource("RectangleShape2D_hvdck")
+
+[node name="cross-6" type="Area2D" parent="." unique_id=1701585523]
+script = ExtResource("3_hvdck")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cross-6" unique_id=1781669519]
+position = Vector2(1181, 100)
+shape = SubResource("RectangleShape2D_cnnus")
+debug_color = Color(0.54059505, 0.56393844, 0.18579644, 0.41960785)
+
+[connection signal="body_entered" from="crab boundary" to="crab" method="_on_crab_boundary_body_entered"]
+[connection signal="body_entered" from="cross-6" to="cross-6" method="_on_body_entered"]

@@ -16,3 +16,7 @@ extends Area2D
 #func _process(delta: float) -> void:
 	#pass
 	#position = position + movement_speed*movement_direction*delta 
+
+
+func _on_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
