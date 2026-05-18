@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://dmbj8d57iqdj8"]
+
+[ext_resource type="Texture2D" uid="uid://ccphooedkwo0y" path="res://Screenshot 2026-05-07 at 2.33.11 PM.png" id="1_4a3qj"]
+[ext_resource type="Texture2D" uid="uid://by6l3okyidlip" path="res://Screenshot 2026-05-07 at 2.33.42 PM.png" id="2_g38d0"]
+[ext_resource type="Script" uid="uid://ik6o47hy2idu" path="res://startscript.gd" id="2_pob1m"]
+[ext_resource type="Texture2D" uid="uid://ckyloqb8ch21d" path="res://CRAB.png" id="3_pob1m"]
+[ext_resource type="Texture2D" uid="uid://5gkalgu0aa4k" path="res://Screenshot 2026-05-17 at 9.00.44 PM.png" id="4_gophc"]
+[ext_resource type="Texture2D" uid="uid://2e6p7kije2xh" path="res://assets/the_gull.png" id="5_p0nl4"]
+[ext_resource type="Texture2D" uid="uid://qnogo8o5jh1n" path="res://palmtree.png" id="6_da165"]
+
+[node name="Node2D" type="Node2D" unique_id=1454611035]
+
+[node name="sky" type="Sprite2D" parent="." unique_id=239213526]
+position = Vector2(570.50006, 318.99997)
+scale = Vector2(5.99495, 5.33871)
+texture = ExtResource("1_4a3qj")
+script = ExtResource("2_pob1m")
+
+[node name="beach" type="Sprite2D" parent="." unique_id=711449651]
+position = Vector2(567.49994, 543.99994)
+scale = Vector2(66.166664, 15.285712)
+texture = ExtResource("2_g38d0")
+
+[node name="Crab" type="Sprite2D" parent="." unique_id=1821052678]
+position = Vector2(402.99994, 508)
+scale = Vector2(0.12280275, 0.13769533)
+texture = ExtResource("3_pob1m")
+
+[node name="invite" type="Sprite2D" parent="." unique_id=1623479540]
+position = Vector2(905.99994, 321.50003)
+scale = Vector2(0.5625002, 0.524448)
+texture = ExtResource("4_gophc")
+
+[node name="crabby tuesday" type="RichTextLabel" parent="." unique_id=1910740859]
+offset_left = 78.0
+offset_top = 30.0
+offset_right = 611.0
+offset_bottom = 235.0
+theme_override_font_sizes/normal_font_size = 60
+text = "CRABBY TUESDAY"
+
+[node name="TheGull" type="Sprite2D" parent="." unique_id=1199044146]
+position = Vector2(189.99998, 290)
+rotation = 0.09437066
+scale = Vector2(0.32614714, 0.36268824)
+texture = ExtResource("5_p0nl4")
+
+[node name="Palmtree" type="Sprite2D" parent="." unique_id=590071318]
+position = Vector2(157.00002, 314)
+scale = Vector2(1.5402753, 1.4471153)
+texture = ExtResource("6_da165")
+
+[node name="space to start" type="RichTextLabel" parent="." unique_id=113014400]
+offset_left = 362.0
+offset_top = 122.0
+offset_right = 640.0
+offset_bottom = 177.0
+theme_override_font_sizes/normal_font_size = 25
+text = "press space to start"
